@@ -22,6 +22,11 @@ sigma2 = zeros(n, 1);
 %
 
 
+mu = (sum(X))' ./ m;
+for i = 1:m
+  sigma2 += (X(i,:)' - mu).^2;
+endfor
+sigma2 = 1/m .* sigma2;
 
 
 
